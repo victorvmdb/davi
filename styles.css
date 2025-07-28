@@ -478,7 +478,7 @@ header {
     .icons-circle {
     width: 300px;
     height: 300px;
-    gap: 4px;
+    gap: 1px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
