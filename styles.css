@@ -187,22 +187,6 @@ header {
     position: relative;
 }
 
-.center-photo {
-    position: relative;
-    z-index: 1; 
-}
-
-.center-photo h2{
-    font-family: 'Courier New', Courier, monospace;
-    color: rgb(189, 16, 16);
-}
-
-.profile-image {
-    width: 150px;
-    height: 150px;
-    margin-bottom: 20px;
-}
-
 .icons-circle {
     position: absolute;
     width: 600px;
