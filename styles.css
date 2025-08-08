@@ -186,6 +186,22 @@ header {
     width: 100%;
     position: relative;
 }
+.center-photo {
+    position: relative;
+    z-index: 1; 
+}
+
+.center-photo h2{
+    font-family: 'Courier New', Courier, monospace;
+    color: yellow;
+    margin-top: 160px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    display: none;
+}
 
 .icons-circle {
     position: absolute;
@@ -402,6 +418,11 @@ header {
     .profile-info p{
         size: 10px;
     }
+    
+    .profile-photo img {
+        width: 100px;
+        height: 125px;
+    }
     .profile-yo h1, h2, h4{
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
@@ -434,38 +455,39 @@ header {
     font-weight: 300;
   }
 
-    .knowledge-section {
-       position: relative;
-       height: 100vh;
-       overflow: hidden;
+  .knowledge-section {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
    }
 
-    .knowledge-section h1 {
-     color: red;
-     position: absolute;
-     top: 10%; 
-     left: 50%;
-     transform: translate(-50%, -50%);
-     font-size: 2.5rem;
-     font-weight: 400;
+   .knowledge-section h1 {
+    color: red;
+    position: absolute;
+    top: 10%; 
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: 400;
     }
     
     .knowledge-container{
-    max-width: 100%;
+        max-width: 100%;
     }
     
     .icons-circle {
     width: 300px;
     height: 300px;
-    gap: 1px;
     left: 50%;
-    top: 50%;
+    top: 1%;
     transform: translate(-50%, -50%);
     position: absolute; 
     }
 
     .center-photo h2{
-    color: #ff2121;
+        color:yellow;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        margin-top: 210px;
     }
 
     .icon {
@@ -478,23 +500,23 @@ header {
     }
 
     .projects-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
     }
     
     .video-card {
-     position: relative;
-     width: 100%;
-     max-width: 750px; 
-     margin: 10px;
-     box-sizing: border-box;
+        position: relative;
+        width: 100%;
+        max-width: 750px; 
+        margin: 10px;
+        box-sizing: border-box;
     }
     
     .video-card video {
-      width: 100%;
-      height: auto;
-      display: block;
+        width: 100%;
+        height: auto;
+        display: block;
     }
 }
 
