@@ -402,11 +402,6 @@ header {
     .profile-info p{
         size: 10px;
     }
-    
-    .profile-photo img {
-        width: 100px;
-        height: 125px;
-    }
     .profile-yo h1, h2, h4{
         font-family: 'Poppins', sans-serif;
         font-weight: 300;
