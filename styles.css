@@ -166,7 +166,7 @@ header {
 
 .knowledge-section {
     padding: 40px 50px;
-    background: radial-gradient(circle, rgb(240, 167, 199) 0%, rgb(190, 210, 233) 100%);
+    background: radial-gradient(circle, #f0a7c7 0%, #bed2e9 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -175,9 +175,10 @@ header {
 }
 
 .knowledge-section h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-    font-size: 18px; /* corregido */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #b30000;
+    font-size: 22px;
+    text-shadow: 1px 1px 3px #fff;
 }
 
 .knowledge-container {
@@ -190,18 +191,22 @@ header {
 
 .center-photo {
     position: relative;
-    z-index: 1;
+    z-index: 2;
+    text-align: center;
 }
 
 .center-photo h2 {
     font-family: 'Courier New', Courier, monospace;
-    color: yellow;
+    color: #fff700;
     margin-top: 160px;
+    text-shadow: 1px 1px 5px #000;
 }
 
 .profile-image {
     width: 150px;
     height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
     display: none;
 }
 
@@ -212,13 +217,12 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    animation: rotate 20s linear infinite;
+    animation: rotate 25s linear infinite;
     transform-style: preserve-3d;
-    perspective: 1000px;
-    transform-origin: center center;
+    transform-origin: center;
     transform: rotateX(25deg);
-    z-index: 2;
+    z-index: 1;
+    perspective: 1200px;
 }
 
 .icon-container {
@@ -228,54 +232,46 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
 }
 
 .icon {
     width: 80px;
     height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+    transition: transform 0.4s ease, opacity 0.3s ease;
     backface-visibility: hidden;
-    transition: transform 0.3s ease, opacity 0.3s ease;
     transform: rotateY(0deg);
 }
 
-/* Mantener los iconos derechos con doble rotación */
-.icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(200px) rotateY(-0deg); }
-.icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(200px) rotateY(-24deg); }
-.icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(200px) rotateY(-48deg); }
-.icon-container:nth-child(4)  { transform: rotateY(72deg) translateZ(200px) rotateY(-72deg); }
-.icon-container:nth-child(5)  { transform: rotateY(96deg) translateZ(200px) rotateY(-96deg); }
-.icon-container:nth-child(6)  { transform: rotateY(120deg) translateZ(200px) rotateY(-120deg); }
-.icon-container:nth-child(7)  { transform: rotateY(144deg) translateZ(200px) rotateY(-144deg); }
-.icon-container:nth-child(8)  { transform: rotateY(168deg) translateZ(200px) rotateY(-168deg); }
-.icon-container:nth-child(9)  { transform: rotateY(192deg) translateZ(200px) rotateY(-192deg); }
-.icon-container:nth-child(10) { transform: rotateY(216deg) translateZ(200px) rotateY(-216deg); }
-.icon-container:nth-child(11) { transform: rotateY(240deg) translateZ(200px) rotateY(-240deg); }
-.icon-container:nth-child(12) { transform: rotateY(264deg) translateZ(200px) rotateY(-264deg); }
-.icon-container:nth-child(13) { transform: rotateY(288deg) translateZ(200px) rotateY(-288deg); }
-.icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(200px) rotateY(-312deg); }
-.icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(200px) rotateY(-336deg); }
-
-@keyframes rotate {
-  from {
-    transform: rotateX(25deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(25deg) rotateY(360deg);
+/* Posiciones de los íconos en círculo 3D */
+@for $i from 1 through 15 {
+  .icon-container:nth-child(#{$i}) {
+    $deg: ($i - 1) * 24;
+    transform: rotateY(#{$deg}deg) translateZ(240px) rotateY(-#{$deg}deg);
   }
 }
 
+/* Animación de rotación */
+@keyframes rotate {
+    0% {
+        transform: rotateX(25deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(25deg) rotateY(360deg);
+    }
+}
+
+/* Pausa y zoom en hover */
 .icons-circle:hover {
     animation-play-state: paused;
 }
 
 .icons-circle:hover .icon-container:hover .icon {
-    transform: scale(2.1);
+    transform: scale(2.2);
     opacity: 1;
-    z-index: 999;
+    z-index: 10;
 }
 
 
