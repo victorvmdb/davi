@@ -174,20 +174,14 @@ header {
     overflow: hidden;
 }
 
-.knowledge-section h1 {
-    font-family: Arial, Helvetica, sans-serif;
-    color: red;
-    font-size: 24px;
-    text-align: center;
-    text-shadow: 1px 1px 3px #fff;
-}
-
 .knowledge-container {
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
     position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
 
 .center-photo {
@@ -203,12 +197,6 @@ header {
     text-shadow: 1px 1px 4px #000;
 }
 
-.profile-image {
-    width: 150px;
-    height: 150px;
-    display: none;
-}
-
 .icons-circle {
     position: absolute;
     width: 600px;
@@ -216,10 +204,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    animation: rotate 25s linear infinite;
+    transform: rotateX(25deg); /* efecto 3D leve */
     transform-style: preserve-3d;
-    transform-origin: center;
-    transform: rotateX(25deg);
     z-index: 1;
 }
 
@@ -230,21 +216,19 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform-style: preserve-3d;
 }
 
+/* Estilo para los íconos */
 .icon {
     width: 80px;
     height: 80px;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
-    transform-style: preserve-3d;
-    opacity: 1;
-    perspective: 1000px; /* o más */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-/* Iconos colocados en círculo manteniendo su orientación */
+/* Posicionamiento circular sin animación */
 .icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(240px) rotateY(-0deg); }
 .icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(240px) rotateY(-24deg); }
 .icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(240px) rotateY(-48deg); }
@@ -260,7 +244,6 @@ header {
 .icon-container:nth-child(13) { transform: rotateY(288deg) translateZ(240px) rotateY(-288deg); }
 .icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(240px) rotateY(-312deg); }
 .icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(240px) rotateY(-336deg); }
-
 @keyframes rotate {
   from {
     transform: rotateX(25deg) rotateY(0deg);
