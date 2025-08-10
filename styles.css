@@ -235,26 +235,6 @@ header {
 .icon-container:nth-child(14) { transform: rotate(312deg)  translate(250px) rotate(-312deg); }
 .icon-container:nth-child(15) { transform: rotate(336deg)  translate(250px) rotate(-336deg); }
 
-@keyframes rotate {
-  from {
-    transform: rotateX(25deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(25deg) rotateY(360deg);
-  }
-}
-
-/* Al pasar el mouse, pausa y resalta */
-.icons-circle:hover {
-    animation-play-state: paused;
-}
-
-.icons-circle:hover .icon-container:hover .icon {
-    transform: scale(2.1);
-    opacity: 1;
-    z-index: 10;
-}
-
 
 .projects-section {
     padding: 40px 20px;
