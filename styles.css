@@ -175,8 +175,9 @@ header {
 
 .knowledge-container {
     position: relative;
-    width: 600px;
-    height: 600px;
+    position: relative;
+    width: 500px;   /* antes era 600x600 */
+    height: 650px;  /* más alto que ancho */
 }
 
 .center-photo {
