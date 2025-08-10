@@ -173,12 +173,12 @@ header {
     height: 100vh;
 }
 
-.knowledge-section h1{
+.knowledge-section h1 {
     font-family: Arial, Helvetica, sans-serif;
     color: red;
-    size: 18px;
-
+    font-size: 18px; /* Corregido: 'size' no es una propiedad válida */
 }
+
 .knowledge-container {
     display: flex;
     justify-content: center;
@@ -186,12 +186,13 @@ header {
     width: 100%;
     position: relative;
 }
+
 .center-photo {
     position: relative;
-    z-index: 1; 
+    z-index: 1;
 }
 
-.center-photo h2{
+.center-photo h2 {
     font-family: 'Courier New', Courier, monospace;
     color: yellow;
     margin-top: 160px;
@@ -200,7 +201,7 @@ header {
 .profile-image {
     width: 150px;
     height: 150px;
-    display: none;
+    display: none; /* Visible solo si lo necesitas */
 }
 
 .icons-circle {
@@ -214,17 +215,9 @@ header {
     animation: rotate 20s linear infinite;
     transform-style: preserve-3d;
     perspective: 1000px;
-    z-index: 2; 
-}
-
-.icons-circle {
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    transform-style: preserve-3d;
-    animation: rotate 20s linear infinite;
-    transform: rotateX(25deg); /* vista desde arriba y de frente */
+    transform: rotateX(25deg);
     transform-origin: center center;
+    z-index: 2;
 }
 
 .icon-container {
@@ -243,11 +236,12 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
-    /* Añade esto si los íconos están de cabeza */
-    transform: rotate(0deg);
     backface-visibility: hidden;
+    transform: rotateY(0deg); /* Asegura que el icono esté de cara */
+    transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Distribución circular de los íconos + rotación para mantener orientación */
 .icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(200px) rotateY(-0deg); }
 .icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(200px) rotateY(-24deg); }
 .icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(200px) rotateY(-48deg); }
@@ -264,26 +258,27 @@ header {
 .icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(200px) rotateY(-312deg); }
 .icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(200px) rotateY(-336deg); }
 
+/* Animación de rotación continua */
 @keyframes rotate {
-  from {
-    transform: rotateX(25deg) rotateY(0deg);
-  }
-  to {
-    transform: rotateX(25deg) rotateY(360deg);
-  }
+    from {
+        transform: rotateX(25deg) rotateY(0deg);
+    }
+    to {
+        transform: rotateX(25deg) rotateY(360deg);
+    }
 }
 
-
-
-.icons-circle:hover .icon-container {
-    animation-play-state: paused; /* Pausa la animación al pasar el cursor */
+/* Hover interacciones */
+.icons-circle:hover {
+    animation-play-state: paused; /* Pausa la rotación al pasar el cursor */
 }
 
-.icons-circle:hover .icon-container:hover .icon {
+.icon-container:hover .icon {
     transform: scale(2.1); 
-    opacity: 1; 
-    z-index: 3; 
+    opacity: 1;
+    z-index: 999; /* Asegura que quede por encima */
 }
+
 
 .projects-section {
     padding: 40px 20px;
