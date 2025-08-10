@@ -245,22 +245,21 @@ header {
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
 }
 
-/* Posiciones individuales para 15 íconos distribuidos en círculo */
-.icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(300px); }
-.icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(300px); }
-.icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(300px); }
-.icon-container:nth-child(4)  { transform: rotateY(72deg) translateZ(300px); }
-.icon-container:nth-child(5)  { transform: rotateY(96deg) translateZ(300px); }
-.icon-container:nth-child(6)  { transform: rotateY(120deg) translateZ(300px); }
-.icon-container:nth-child(7)  { transform: rotateY(144deg) translateZ(300px); }
-.icon-container:nth-child(8)  { transform: rotateY(168deg) translateZ(300px); }
-.icon-container:nth-child(9)  { transform: rotateY(192deg) translateZ(300px); }
-.icon-container:nth-child(10) { transform: rotateY(216deg) translateZ(300px); }
-.icon-container:nth-child(11) { transform: rotateY(240deg) translateZ(300px); }
-.icon-container:nth-child(12) { transform: rotateY(264deg) translateZ(300px); }
-.icon-container:nth-child(13) { transform: rotateY(288deg) translateZ(300px); }
-.icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(300px); }
-.icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(300px); }
+.icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(200px) rotateY(-0deg); }
+.icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(200px) rotateY(-24deg); }
+.icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(200px) rotateY(-48deg); }
+.icon-container:nth-child(4)  { transform: rotateY(72deg) translateZ(200px) rotateY(-72deg); }
+.icon-container:nth-child(5)  { transform: rotateY(96deg) translateZ(200px) rotateY(-96deg); }
+.icon-container:nth-child(6)  { transform: rotateY(120deg) translateZ(200px) rotateY(-120deg); }
+.icon-container:nth-child(7)  { transform: rotateY(144deg) translateZ(200px) rotateY(-144deg); }
+.icon-container:nth-child(8)  { transform: rotateY(168deg) translateZ(200px) rotateY(-168deg); }
+.icon-container:nth-child(9)  { transform: rotateY(192deg) translateZ(200px) rotateY(-192deg); }
+.icon-container:nth-child(10) { transform: rotateY(216deg) translateZ(200px) rotateY(-216deg); }
+.icon-container:nth-child(11) { transform: rotateY(240deg) translateZ(200px) rotateY(-240deg); }
+.icon-container:nth-child(12) { transform: rotateY(264deg) translateZ(200px) rotateY(-264deg); }
+.icon-container:nth-child(13) { transform: rotateY(288deg) translateZ(200px) rotateY(-288deg); }
+.icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(200px) rotateY(-312deg); }
+.icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(200px) rotateY(-336deg); }
 
 @keyframes rotate {
   from {
