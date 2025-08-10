@@ -243,6 +243,9 @@ header {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+    /* Añade esto si los íconos están de cabeza */
+    transform: rotate(0deg);
+    backface-visibility: hidden;
 }
 
 .icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(200px) rotateY(-0deg); }
