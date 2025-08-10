@@ -171,79 +171,69 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    overflow: hidden;
 }
 
 .knowledge-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
     position: relative;
-    perspective: 1000px;
-    transform-style: preserve-3d;
+    width: 600px;
+    height: 600px;
 }
 
 .center-photo {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
+    z-index: 2;
 }
 
 .center-photo h2 {
     font-family: 'Courier New', Courier, monospace;
     color: yellow;
-    margin-top: 160px;
     text-shadow: 1px 1px 4px #000;
 }
 
 .icons-circle {
     position: absolute;
-    width: 600px;
-    height: 600px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    transform: rotateX(25deg); /* efecto 3D leve */
-    transform-style: preserve-3d;
-    z-index: 1;
+    width: 100%;
+    height: 100%;
 }
 
 .icon-container {
     position: absolute;
-    width: 100px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Estilo para los íconos */
-.icon {
     width: 80px;
     height: 80px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
-/* Posicionamiento circular sin animación */
-.icon-container:nth-child(1)  { transform: rotateY(0deg) translateZ(240px) rotateY(-0deg); }
-.icon-container:nth-child(2)  { transform: rotateY(24deg) translateZ(240px) rotateY(-24deg); }
-.icon-container:nth-child(3)  { transform: rotateY(48deg) translateZ(240px) rotateY(-48deg); }
-.icon-container:nth-child(4)  { transform: rotateY(72deg) translateZ(240px) rotateY(-72deg); }
-.icon-container:nth-child(5)  { transform: rotateY(96deg) translateZ(240px) rotateY(-96deg); }
-.icon-container:nth-child(6)  { transform: rotateY(120deg) translateZ(240px) rotateY(-120deg); }
-.icon-container:nth-child(7)  { transform: rotateY(144deg) translateZ(240px) rotateY(-144deg); }
-.icon-container:nth-child(8)  { transform: rotateY(168deg) translateZ(240px) rotateY(-168deg); }
-.icon-container:nth-child(9)  { transform: rotateY(192deg) translateZ(240px) rotateY(-192deg); }
-.icon-container:nth-child(10) { transform: rotateY(216deg) translateZ(240px) rotateY(-216deg); }
-.icon-container:nth-child(11) { transform: rotateY(240deg) translateZ(240px) rotateY(-240deg); }
-.icon-container:nth-child(12) { transform: rotateY(264deg) translateZ(240px) rotateY(-264deg); }
-.icon-container:nth-child(13) { transform: rotateY(288deg) translateZ(240px) rotateY(-288deg); }
-.icon-container:nth-child(14) { transform: rotateY(312deg) translateZ(240px) rotateY(-312deg); }
-.icon-container:nth-child(15) { transform: rotateY(336deg) translateZ(240px) rotateY(-336deg); }
+.icon {
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
+}
+
+/* Posiciones estáticas en círculo plano */
+.icon-container:nth-child(1)  { transform: rotate(0deg)    translate(250px) rotate(-0deg); }
+.icon-container:nth-child(2)  { transform: rotate(24deg)   translate(250px) rotate(-24deg); }
+.icon-container:nth-child(3)  { transform: rotate(48deg)   translate(250px) rotate(-48deg); }
+.icon-container:nth-child(4)  { transform: rotate(72deg)   translate(250px) rotate(-72deg); }
+.icon-container:nth-child(5)  { transform: rotate(96deg)   translate(250px) rotate(-96deg); }
+.icon-container:nth-child(6)  { transform: rotate(120deg)  translate(250px) rotate(-120deg); }
+.icon-container:nth-child(7)  { transform: rotate(144deg)  translate(250px) rotate(-144deg); }
+.icon-container:nth-child(8)  { transform: rotate(168deg)  translate(250px) rotate(-168deg); }
+.icon-container:nth-child(9)  { transform: rotate(192deg)  translate(250px) rotate(-192deg); }
+.icon-container:nth-child(10) { transform: rotate(216deg)  translate(250px) rotate(-216deg); }
+.icon-container:nth-child(11) { transform: rotate(240deg)  translate(250px) rotate(-240deg); }
+.icon-container:nth-child(12) { transform: rotate(264deg)  translate(250px) rotate(-264deg); }
+.icon-container:nth-child(13) { transform: rotate(288deg)  translate(250px) rotate(-288deg); }
+.icon-container:nth-child(14) { transform: rotate(312deg)  translate(250px) rotate(-312deg); }
+.icon-container:nth-child(15) { transform: rotate(336deg)  translate(250px) rotate(-336deg); }
+
 @keyframes rotate {
   from {
     transform: rotateX(25deg) rotateY(0deg);
