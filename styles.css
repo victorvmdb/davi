@@ -175,24 +175,8 @@ header {
 
 .knowledge-container {
     position: relative;
-    position: relative;
-    width: 500px;   /* antes era 600x600 */
-    height: 650px;  /* más alto que ancho */
-}
-
-.center-photo {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-}
-
-.center-photo h2 {
-    font-family: 'Courier New', Courier, monospace;
-    color: yellow;
-    text-shadow: 1px 1px 4px #000;
+    width: 500px;   /* ancho */
+    height: 750px;  /* alto mayor que ancho para el óvalo vertical */
 }
 
 .icons-circle {
@@ -207,33 +191,28 @@ header {
     height: 80px;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform-origin: center center;
 }
 
-.icon {
-    width: 100%;
-    height: 100%;
-    border-radius: 15px;
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
-    filter: drop-shadow(0 10px 10px rgba(0, 0, 0, 0.3));
-}
+/* Distribución en óvalo vertical */
+/* Usamos seno y coseno para eje X e Y diferentes */
 
-/* Posiciones estáticas en círculo plano */
-.icon-container:nth-child(1)  { transform: rotate(0deg)    translate(250px) rotate(-0deg); }
-.icon-container:nth-child(2)  { transform: rotate(24deg)   translate(250px) rotate(-24deg); }
-.icon-container:nth-child(3)  { transform: rotate(48deg)   translate(250px) rotate(-48deg); }
-.icon-container:nth-child(4)  { transform: rotate(72deg)   translate(250px) rotate(-72deg); }
-.icon-container:nth-child(5)  { transform: rotate(96deg)   translate(250px) rotate(-96deg); }
-.icon-container:nth-child(6)  { transform: rotate(120deg)  translate(250px) rotate(-120deg); }
-.icon-container:nth-child(7)  { transform: rotate(144deg)  translate(250px) rotate(-144deg); }
-.icon-container:nth-child(8)  { transform: rotate(168deg)  translate(250px) rotate(-168deg); }
-.icon-container:nth-child(9)  { transform: rotate(192deg)  translate(250px) rotate(-192deg); }
-.icon-container:nth-child(10) { transform: rotate(216deg)  translate(250px) rotate(-216deg); }
-.icon-container:nth-child(11) { transform: rotate(240deg)  translate(250px) rotate(-240deg); }
-.icon-container:nth-child(12) { transform: rotate(264deg)  translate(250px) rotate(-264deg); }
-.icon-container:nth-child(13) { transform: rotate(288deg)  translate(250px) rotate(-288deg); }
-.icon-container:nth-child(14) { transform: rotate(312deg)  translate(250px) rotate(-312deg); }
-.icon-container:nth-child(15) { transform: rotate(336deg)  translate(250px) rotate(-336deg); }
+.icon-container:nth-child(1)  { transform: translate(-50%, -50%) translate(calc(0px), -350px); }
+.icon-container:nth-child(2)  { transform: translate(-50%, -50%) translate(calc(81px), -334px); }
+.icon-container:nth-child(3)  { transform: translate(-50%, -50%) translate(calc(156px), -292px); }
+.icon-container:nth-child(4)  { transform: translate(-50%, -50%) translate(calc(211px), -230px); }
+.icon-container:nth-child(5)  { transform: translate(-50%, -50%) translate(calc(240px), -156px); }
+.icon-container:nth-child(6)  { transform: translate(-50%, -50%) translate(calc(240px), -80px); }
+.icon-container:nth-child(7)  { transform: translate(-50%, -50%) translate(calc(211px), -22px); }
+.icon-container:nth-child(8)  { transform: translate(-50%, -50%) translate(calc(156px), 15px); }
+.icon-container:nth-child(9)  { transform: translate(-50%, -50%) translate(calc(81px), 15px); }
+.icon-container:nth-child(10) { transform: translate(-50%, -50%) translate(calc(0px), 0px); }
+.icon-container:nth-child(11) { transform: translate(-50%, -50%) translate(calc(-81px), 15px); }
+.icon-container:nth-child(12) { transform: translate(-50%, -50%) translate(calc(-156px), 15px); }
+.icon-container:nth-child(13) { transform: translate(-50%, -50%) translate(calc(-211px), -22px); }
+.icon-container:nth-child(14) { transform: translate(-50%, -50%) translate(calc(-240px), -80px); }
+.icon-container:nth-child(15) { transform: translate(-50%, -50%) translate(calc(-240px), -156px); }
+
 
 
 .projects-section {
