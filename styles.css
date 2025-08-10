@@ -207,18 +207,26 @@ header {
     position: absolute;
     width: 600px;
     height: 600px;
-    animation: rotateCircle 20s linear infinite;
-    transform: rotateX(20deg); /* Inclinación frontal */
-    transform-origin: center center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    animation: rotate 20s linear infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    z-index: 2; 
 }
 
 .icon-container {
     position: absolute;
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
+    background-image: black;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    transform-style: preserve-3d;
 }
 
 .icon {
@@ -243,17 +251,73 @@ header {
     filter: blur(5px);
     z-index: -1;
 }
-.icon-container:nth-child(n) {
-    transform: rotateZ(calc(360deg / 15 * (n - 1))) translateX(250px);
+
+.icon-container:nth-child(1) {
+    transform: rotateY(0deg) translateZ(300px);
 }
 
+.icon-container:nth-child(2) {
+    transform: rotateY(24deg) translateZ(300px);
+}
 
-@keyframes rotateCircle {
+.icon-container:nth-child(3) {
+    transform: rotateY(48deg) translateZ(300px);
+}
+
+.icon-container:nth-child(4) {
+    transform: rotateY(72deg) translateZ(300px);
+}
+
+.icon-container:nth-child(5) {
+    transform: rotateY(96deg) translateZ(300px);
+}
+
+.icon-container:nth-child(6) {
+    transform: rotateY(120deg) translateZ(300px);
+}
+
+.icon-container:nth-child(7) {
+    transform: rotateY(144deg) translateZ(300px);
+}
+
+.icon-container:nth-child(8) {
+    transform: rotateY(168deg) translateZ(300px);
+}
+
+.icon-container:nth-child(9) {
+    transform: rotateY(192deg) translateZ(300px);
+}
+
+.icon-container:nth-child(10) {
+    transform: rotateY(216deg) translateZ(300px);
+}
+
+.icon-container:nth-child(11) {
+    transform: rotateY(240deg) translateZ(300px);
+}
+
+.icon-container:nth-child(12) {
+    transform: rotateY(264deg) translateZ(300px);
+}
+
+.icon-container:nth-child(13) {
+    transform: rotateY(288deg) translateZ(300px);
+}
+
+.icon-container:nth-child(14) {
+    transform: rotateY(312deg) translateZ(300px);
+}
+
+.icon-container:nth-child(15) {
+    transform: rotateY(336deg) translateZ(300px);
+}
+
+@keyframes rotate {
     0% {
-        transform: rotateX(20deg) rotateZ(0deg);
+        transform: rotateY(0deg);
     }
     100% {
-        transform: rotateX(20deg) rotateZ(360deg);
+        transform: rotateY(360deg);
     }
 }
 
